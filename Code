@@ -60,7 +60,7 @@ for k,v in list(fasta_dict.items()):
 '''print(len(fasta_dict.keys()))'''
 
 
-#Add mutated data + data from which substring data was removed
+#Add mutated data + data from which substring data was removed + write into final out.fasta file
 merged_data = {**fasta_dict, **subseq_fasta}
 with open('out.fasta','w') as fhl1:
     for k,v in merged_data.items():
