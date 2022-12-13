@@ -5,7 +5,7 @@ from urllib.request import urlopen
 #data extract from URL to dictionary
 fasta_dict = {}
 url = "https://ftp.ncbi.nlm.nih.gov/genomes/Viruses/MonkeyPox.fn"
-file = urlopen(url)
+#file = urlopen(url)
 with urlopen(url) as f:
     for line in file:
         decoded_line = line.decode("utf-8")
@@ -66,4 +66,4 @@ with open('out.fasta','w') as fhl1:
     for k,v in merged_data.items():
         fhl1.write(str(k + '\n' + v + '\n'))
 #print(len(merged_data.keys()))
-print('Assignment 2 Completed')
+#print('Assignment 2 Completed')
